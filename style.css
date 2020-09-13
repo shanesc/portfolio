@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --main-color: #272341;
+  --highlight-color: #00cdac;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--main-color);
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#hero {
+  height: 100vh;
+  position: relative;
+}
+
+#about {
+  background-image: linear-gradient(135deg, #02aab0,#00cdac);
+  /* height: 100vh; */
+  padding: 10rem 0 60rem;
+  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+  transform: skewY(-7deg);
+  /* margin-top: 7; */
+}
+
+#projects {
+  height: 100vh;
+  padding-top: 10rem;
+}
+
+.header {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5.6rem;
+  line-height: 1.2;
+  padding-left: 15%;
+  font-weight: 700;
+}
+
+.header-text {
+  position: relative;
+  animation: moveInLeft 1s .7s forwards;
+  opacity: 0;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px var(--highlight-color) solid;
+  color: var(--highlight-color);
+  font-size: 2.4rem;
+  padding: .8rem 1.6rem;
+  position: relative;
+  animation: moveInLeft 1s 1.5s forwards;
+  opacity: 0;
+}
+
+.btn:active, .btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: var(--highlight-color);
+}
+
+.about-content {
+  transform: skewY(7deg);
+}
+
+.about-header {
+  color: #fff;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    left: -3rem;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

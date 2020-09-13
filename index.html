@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Shane's Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section id="hero">
+      <div class="header">
+        <h1 class="header-text">Hi, my name is <span class="highlight">Shane Mitchell.</span>
+        <br>
+        I'm a Web Developer.</h1>
+        <a class="btn" onclick="myFunction()">Learn more</a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-content">
+        <h2 class="about-header">About Me</h2>
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="projects-header">Projects</h2>
+    </section>
+    <section id="contact">
+
+    </section>
+    <script>
+      function myFunction() {
+        var elmnt = document.getElementById("about");
+        elmnt.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
+  </body>
+</html>
