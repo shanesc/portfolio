@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Shane's Personal Site</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
   </head>
   <body>
     <section id="hero">
@@ -11,23 +12,95 @@
         <h1 class="header-text">Hi, my name is <span class="highlight">Shane Mitchell.</span>
         <br>
         I'm a Web Developer.</h1>
-        <a class="btn" onclick="myFunction()">Learn more</a>
+        <a class="btn btn--hero" onclick="scrollToAbout()">Learn more</a>
       </div>
     </section>
     <section id="about">
       <div class="about-content">
         <h2 class="about-header">About Me</h2>
+        <div class="container">
+          <img src="/images/stock-image.jpg" alt="Photo of me" class="about-img">
+          <div class="about-info">
+            <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quo optio consequatur unde dicta corrupti asperiores tenetur fugit quae ducimus nam minima dolore, consequuntur, quia vero a atque beatae perspiciatis.</p>
+            <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error numquam nesciunt placeat saepe aliquam porro, tempore dignissimos ab adipisci nulla ipsum aliquid necessitatibus, enim ad accusamus excepturi a et corporis!</p>
+            <a class="btn btn--resume" href="#">Resume</a>
+          </div>
+        </div>
       </div>
     </section>
     <section id="projects">
       <h2 class="projects-header">Projects</h2>
+      <div class="projects-container">
+        <div class="projects-info">
+          <h3 class="projects-title">Library</h3>
+          <p class="projects-description">A Vanilla JS app that allows users to add, delete, and change the read status of book cards. It uses local storage to maintain a users library from session-to-session.<br><br>Flexbox was used for a responsive design and Sass was used for the CSS. Object constructors are used to create each new Book object.</p>
+          <div class="projects-cta">
+            <a href="https://shanesc.github.io/library/" target="_blank" class="btn btn--project-live">See Live</a>
+            <a href="https://github.com/shanesc/library" target="_blank" class="btn btn--project-source">Source Code</a>
+          </div>
+        </div>
+        <a href="https://shanesc.github.io/library/" target="_blank"">
+          <img src="images/library-project.png" alt="Library project screenshot" class="project-img u-shift-up">
+        </a>
+      </div>
+      <div class="projects-container">
+        <div class="projects-info">
+          <h3 class="projects-title">Project 2</h3>
+          <p class="projects-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur officia nam ipsam, minima natus dolorem pariatur inventore corporis id obcaecati vel veniam ipsum debitis qui quam consequuntur quibusdam quos? Quisquam?</p>
+          <div class="projects-cta">
+            <a href="#" class="btn btn--project-live">See Live</a>
+            <a href="#" class="btn btn--project-source">Source Code</a>
+          </div>
+        </div>
+        <img src="images/project.jpg" alt="Project screenshot" class="project-img u-shift-up">
+      </div>
+      <div class="projects-container">
+        <div class="projects-info">
+          <h3 class="projects-title">Project 3</h3>
+          <p class="projects-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error eum hic, perspiciatis iusto tenetur dolores earum optio eos nisi, sapiente explicabo commodi asperiores illum amet dignissimos id. Aliquam, atque!</p>
+          <div class="projects-cta">
+            <a href="#" class="btn btn--project-live">See Live</a>
+            <a href="#" class="btn btn--project-source">Source Code</a>
+          </div>
+        </div>
+        <img src="images/project.jpg" alt="Project screenshot" class="project-img u-shift-up">
+      </div>
     </section>
     <section id="contact">
-
+      <h2 class="contact-header">Contact</h2>
+      <h3 class="contact-text">Would you like to work with me? Amazing!</h3>
+      <a href="#" class="btn btn--contact">Let's Talk</a>
     </section>
+    <footer class="footer">
+      <a onclick="scrollToHero()" class="back-to-top">
+        <i class="fa fa-angle-up fa-2x u-shift-up"></i>
+      </a>
+      <div class="social-links">
+        <a href="https://twitter.com/shanem_io" target="_blank">
+          <i class="fab fa-twitter u-shift-up"></i>
+        </a>
+        <a href="https:www.github.com/shanesc" target="_blank">
+          <i class="fab fa-github u-shift-up"></i>
+        </a>
+        <a href="https://codepen.io/shaneSC" target="_blank">
+          <i class="fab fa-codepen u-shift-up"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/shane-m-0668a766/" target="_blank">
+          <i class="fab fa-linkedin-in u-shift-up"></i>
+        </a>
+      </div>
+      <hr>
+      <p class="footer-text">
+        © 2020 Made by Shane Mitchell
+      </p>
+    </footer>
     <script>
-      function myFunction() {
+      function scrollToAbout() {
         var elmnt = document.getElementById("about");
+        elmnt.scrollIntoView({ behavior: 'smooth' });
+      }
+      function scrollToHero() {
+        var elmnt = document.getElementById("hero");
         elmnt.scrollIntoView({ behavior: 'smooth' });
       }
     </script>
