@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* VARIABLES */
+
 :root {
   --main-color: #272341;
   --highlight-color: #00cdac;
 }
+
+/* RESET */
 
 *,
 *::before,
@@ -26,6 +30,8 @@ body {
   box-sizing: border-box;
 }
 
+/* STYLES */
+
 body {
   font-family: montserrat;
   font-size: 1.6rem;
@@ -44,6 +50,28 @@ h2 {
 #hero {
   height: 100vh;
   position: relative;
+}
+
+.hero {
+  &__heading {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5.6rem;
+    line-height: 1.2;
+    padding-left: 15%;
+    font-weight: 700;
+  }
+
+  &__text {
+    position: relative;
+    animation: moveInLeft 1s .7s forwards;
+    opacity: 0;
+
+    &--green {
+      color: var(--highlight-color);
+    }
+  }
 }
 
 #about {
@@ -75,47 +103,40 @@ footer {
   margin-top: -1px;
 }
 
-.header {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 5.6rem;
-  line-height: 1.2;
-  padding-left: 15%;
-  font-weight: 700;
-}
 
-.header-text {
-  position: relative;
-  animation: moveInLeft 1s .7s forwards;
-  opacity: 0;
-}
 
-.highlight {
-  color: var(--highlight-color);
-}
 
 .btn {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 700;
-  border: 2px var(--highlight-color) solid;
-  padding: .8rem 1.6rem;
-  color: var(--highlight-color);
-  font-size: 2.4rem;
+  &,
+  &:link,
+  &:visited{
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    border: 2px var(--highlight-color) solid;
+    padding: .8rem 1.6rem;
+  }
+  
+  &--green {
+    color: var(--highlight-color);
+
+    &:hover {
+      color: #fff;
+      background-color: var(--highlight-color);
+    }
+  }
+  
+  &--big {
+    font-size: 2.4rem;
+  }
 }
 
 .btn:active, .btn:focus {
   outline: none;
 }
 
-.btn:hover {
-  color: #fff;
-  background-color: var(--highlight-color);
-}
-
-.btn--hero {
+.animate-from-left {
   position: relative;
   animation: moveInLeft 1s 1.5s forwards;
   opacity: 0;
