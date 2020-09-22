@@ -7,63 +7,75 @@
     <link rel="stylesheet" href="css/all.css">
   </head>
   <body>
-    <section id="hero">
+    <section class="hero">
       <div class="hero__heading">
-        <h1 class="hero__text">Hi, my name is <span class="hero__text--green">Shane Mitchell.</span>
+        <h1 class="hero__text">Hi, my name is <span class="u-color-light-green">Shane Mitchell.</span>
         <br>
         I'm a Web Developer.</h1>
-        <a class="btn btn--big btn--green animate-from-left" onclick="scrollToAbout()">Learn more</a>
+        <a class="hero__btn btn btn--big btn--green" onclick="scrollToAbout()">Learn more</a>
       </div>
     </section>
-    <section id="about">
-      <div class="about-content">
-        <h2 class="about-header">About Me</h2>
-        <div class="container">
-          <img src="/images/stock-image.jpg" alt="Photo of me" class="about-img">
-          <div class="about-info">
-            <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quo optio consequatur unde dicta corrupti asperiores tenetur fugit quae ducimus nam minima dolore, consequuntur, quia vero a atque beatae perspiciatis.</p>
-            <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error numquam nesciunt placeat saepe aliquam porro, tempore dignissimos ab adipisci nulla ipsum aliquid necessitatibus, enim ad accusamus excepturi a et corporis!</p>
-            <a class="btn btn--resume" href="#">Resume</a>
+    <section class="about">
+      <div class="container">
+        <h2 class="u-color-white">About Me</h2>
+          <div class="wrapper">
+            <div class="wrapper__item">
+              <img src="/images/stock-image.jpg" alt="Photo of me" class="about__image">
+            </div>
+            <div class="wrapper__item">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quo optio consequatur unde dicta corrupti asperiores tenetur fugit quae ducimus nam minima dolore, consequuntur, quia vero a atque beatae perspiciatis.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error numquam nesciunt placeat saepe aliquam porro, tempore dignissimos ab adipisci nulla ipsum aliquid necessitatibus, enim ad accusamus excepturi a et corporis!</p>  
+              <div class="about__btn">
+                <a class="btn btn--white" href="#">Resume</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </section>
-    <section id="projects">
-      <h2 class="projects-header">Projects</h2>
-      <div class="projects-container">
-        <div class="projects-info">
-          <h3 class="projects-title">Library</h3>
-          <p class="projects-description">A Vanilla JS app that allows users to add, delete, and change the read status of book cards. It uses local storage to maintain a users library from session-to-session.<br><br>Flexbox was used for a responsive design and Sass was used for the CSS. Object constructors are used to create each new Book object.</p>
-          <div class="projects-cta">
-            <a href="https://shanesc.github.io/library/" target="_blank" class="btn btn--project-live">See Live</a>
-            <a href="https://github.com/shanesc/library" target="_blank" class="btn btn--project-source">Source Code</a>
+    <section class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="wrapper">
+          <div class="wrapper__item wrapper__item--one-third">
+            <h3 class="projects__title">Library</h3>
+            <p>A Vanilla JS app that allows users to add, delete, and change the read status of book cards. It uses local storage to maintain a users library from session-to-session.</p><p>Flexbox was used for a responsive design and Sass was used for the CSS. Object constructors are used to create each new Book object.</p>
+            <div class="projects__btns">
+              <a href="https://shanesc.github.io/library/" target="_blank" class="btn btn--green">See Live</a>
+              <a href="https://github.com/shanesc/library" target="_blank" class="btn btn--green btn--no-border u-shift-right">Source Code</a>
+            </div>
+          </div>
+          <div class="wrapper__item wrapper__item--two-thirds">
+            <a href="https://shanesc.github.io/library/" target="_blank"">
+              <img src="images/library-project.png" alt="Library project screenshot" class="projects__image u-shift-up">
+            </a>
           </div>
         </div>
-        <a href="https://shanesc.github.io/library/" target="_blank"">
-          <img src="images/library-project.png" alt="Library project screenshot" class="project-img u-shift-up">
-        </a>
-      </div>
-      <div class="projects-container">
-        <div class="projects-info">
-          <h3 class="projects-title">Project 2</h3>
-          <p class="projects-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur officia nam ipsam, minima natus dolorem pariatur inventore corporis id obcaecati vel veniam ipsum debitis qui quam consequuntur quibusdam quos? Quisquam?</p>
-          <div class="projects-cta">
-            <a href="#" class="btn btn--project-live">See Live</a>
-            <a href="#" class="btn btn--project-source">Source Code</a>
+        <div class="wrapper">
+          <div class="wrapper__item wrapper__item--one-third">
+            <h3 class="projects__title">Project 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur officia nam ipsam, minima natus dolorem pariatur inventore corporis id obcaecati vel veniam ipsum debitis qui quam consequuntur quibusdam quos? Quisquam?</p>
+            <div class="projects__btns">
+              <a href="#" class="btn btn--green">See Live</a>
+              <a href="#" class="btn btn--green btn--no-border u-shift-right">Source Code</a>
+            </div>
+          </div>
+          <div class="wrapper__item wrapper__item--two-thirds">
+            <img src="images/project.jpg" alt="Project screenshot" class="projects__image u-shift-up">
           </div>
         </div>
-        <img src="images/project.jpg" alt="Project screenshot" class="project-img u-shift-up">
-      </div>
-      <div class="projects-container">
-        <div class="projects-info">
-          <h3 class="projects-title">Project 3</h3>
-          <p class="projects-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error eum hic, perspiciatis iusto tenetur dolores earum optio eos nisi, sapiente explicabo commodi asperiores illum amet dignissimos id. Aliquam, atque!</p>
-          <div class="projects-cta">
-            <a href="#" class="btn btn--project-live">See Live</a>
-            <a href="#" class="btn btn--project-source">Source Code</a>
+        <div class="wrapper">
+          <div class="wrapper__item wrapper__item--one-third">
+            <h3 class="projects__title">Project 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse error eum hic, perspiciatis iusto tenetur dolores earum optio eos nisi, sapiente explicabo commodi asperiores illum amet dignissimos id. Aliquam, atque!</p>
+            <div class="projects__btns">
+              <a href="#" class="btn btn--green">See Live</a>
+              <a href="#" class="btn btn--green btn--no-border u-shift-right">Source Code</a>
+            </div>
+          </div>
+          <div class="wrapper__item wrapper__item--two-thirds">
+            <img src="images/project.jpg" alt="Project screenshot" class="projects__image u-shift-up">
           </div>
         </div>
-        <img src="images/project.jpg" alt="Project screenshot" class="project-img u-shift-up">
       </div>
     </section>
     <section id="contact">
@@ -96,11 +108,11 @@
     </footer>
     <script>
       function scrollToAbout() {
-        var elmnt = document.getElementById("about");
+        var elmnt = document.querySelector(".about");
         elmnt.scrollIntoView({ behavior: 'smooth' });
       }
       function scrollToHero() {
-        var elmnt = document.getElementById("hero");
+        var elmnt = document.querySelector(".hero");
         elmnt.scrollIntoView({ behavior: 'smooth' });
       }
     </script>
