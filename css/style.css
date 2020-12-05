@@ -114,7 +114,7 @@ address {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1140px;
 }
 
 .wrapper {
@@ -271,7 +271,7 @@ address {
 }
 
 .u-shift-up {
-  transition: all 0.2s ease-in;
+  transition: transform 0.2s ease-in;
 }
 
 .u-shift-up:hover {
@@ -301,11 +301,126 @@ hr {
   margin: 1rem auto;
 }
 
-@media (min-width: 1200px) {
+/* MEDIA QUERIES */
+/* LARGE */
+@media (max-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 980px;
   }
 }
+/* MEDIUM */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .hero__heading {
+    padding-left: 5%;
+  }
+
+  .container {
+    max-width: 760px;
+  }
+
+  .about__image {
+    width: 30rem;
+  }
+
+  .projects__project {
+    margin-bottom: 5rem;
+  }
+  .projects__details {
+    margin-right: 4rem;
+  }
+  .projects__image {
+    max-width: 40rem;
+    max-height: 30rem;
+  }
+
+  .contact__header {
+    margin-bottom: 3rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.1rem;
+  }
+
+  .btn--large {
+    font-size: 2.2rem;
+  }
+}
+/* SMALL */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper__item {
+    padding-bottom: 4rem;
+    max-width: 80%;
+  }
+
+  .about,
+.contact {
+    clip-path: none;
+  }
+
+  .about {
+    padding-bottom: 0;
+    padding-top: 5rem;
+  }
+
+  .projects__project {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .projects__details {
+    order: 1;
+    margin: 0;
+  }
+  .projects__demo {
+    margin-bottom: 3rem;
+  }
+  .projects__title, .projects__btns {
+    text-align: center;
+  }
+
+  .btn--large {
+    font-size: 1.8rem;
+  }
+}
+/* X-SMALL */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .btn, .btn:link, .btn:visited {
+    padding: 0.8rem 1.6rem;
+  }
+  .btn--large {
+    font-size: 1.6rem;
+  }
+}
+/* ANIMATIONS */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
