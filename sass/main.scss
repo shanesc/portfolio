@@ -125,12 +125,6 @@ address {
   max-width: 980px;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -156,7 +150,7 @@ address {
 
 .about {
   background-image: var(--gradient-green);
-  padding: 10rem 1.5rem 10%;
+  padding: 10rem 1.5rem 15%;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
   &__image {
@@ -235,7 +229,11 @@ address {
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   text-align: center;
 
-  &__heading {
+  &__header {
+    margin-bottom: 4.5rem;
+  }
+
+  &__body {
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 2.5rem;
@@ -373,6 +371,12 @@ hr {
   border-top: 2px solid hsla(0, 0%, 100%, 0.1);
   width: 50%;
   margin: 1rem auto;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
 @keyframes moveInLeft {

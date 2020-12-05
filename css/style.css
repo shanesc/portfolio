@@ -117,11 +117,6 @@ address {
   max-width: 980px;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
 .wrapper {
   display: flex;
   align-items: center;
@@ -143,7 +138,7 @@ address {
 
 .about {
   background-image: var(--gradient-green);
-  padding: 10rem 1.5rem 10%;
+  padding: 10rem 1.5rem 15%;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .about__image {
@@ -199,7 +194,10 @@ address {
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   text-align: center;
 }
-.contact__heading {
+.contact__header {
+  margin-bottom: 4.5rem;
+}
+.contact__body {
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 2.5rem;
@@ -303,6 +301,11 @@ hr {
   margin: 1rem auto;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
 @keyframes moveInLeft {
   0% {
     opacity: 0;
