@@ -65,7 +65,7 @@ h3 {
 
 p {
   line-height: 1.5;
-  text-align: start;
+  text-align: justify;
   margin-bottom: 1rem;
 }
 p:last-of-type {
@@ -151,40 +151,34 @@ address {
 }
 
 .projects {
-  padding: 5rem 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 5rem 3rem 0;
 }
 .projects__project {
-  display: flex;
   width: 100%;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  grid-template-areas: "title demo" "details demo" "buttons demo";
+  column-gap: 8rem;
   margin-bottom: 10rem;
 }
-.projects__details {
-  margin-right: 8rem;
-  flex: 0 0 30rem;
-}
 .projects__title {
-  text-align: start;
+  grid-area: title;
 }
-.projects__container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 8rem;
+.projects__details {
+  grid-area: details;
 }
 .projects__btns {
-  text-align: start;
-  margin-top: 1.5rem;
+  grid-area: buttons;
+}
+.projects__demo {
+  grid-area: demo;
+  align-self: center;
 }
 .projects__image {
   max-width: 61rem;
   max-height: 40rem;
   border-radius: 3px;
   box-shadow: 0 0.5rem 1rem rgba(22, 22, 22, 0.2);
-}
-.projects .wrapper__item {
-  align-self: flex-start;
 }
 
 .contact {
@@ -342,9 +336,6 @@ hr {
   .projects__project {
     margin-bottom: 5rem;
   }
-  .projects__details {
-    margin-right: 4rem;
-  }
   .projects__image {
     max-width: 40rem;
     max-height: 30rem;
@@ -374,7 +365,6 @@ hr {
   }
   .wrapper__item {
     padding-bottom: 4rem;
-    max-width: 80%;
   }
 
   .about,
@@ -388,21 +378,18 @@ hr {
   }
 
   .projects__project {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-  .projects__details {
-    order: 1;
-    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "demo" "details" "buttons";
+    justify-items: center;
+    margin-bottom: 6rem;
   }
   .projects__demo {
-    margin-bottom: 3rem;
-  }
-  .projects__title, .projects__btns {
-    text-align: center;
+    margin-bottom: 2rem;
   }
 
+  .btn {
+    font-size: 1.2rem;
+  }
   .btn--large {
     font-size: 1.8rem;
   }
@@ -416,6 +403,13 @@ hr {
   .about__image {
     width: 100%;
     max-width: 30rem;
+  }
+
+  .projects__demo {
+    max-width: 80%;
+  }
+  .projects__image {
+    max-width: 100%;
   }
 
   .btn, .btn:link, .btn:visited {
