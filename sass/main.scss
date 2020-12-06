@@ -511,6 +511,13 @@ hr {
     font-size: 3.6rem;
   }
 
+  .about {
+    &__image {
+      width: 100%;
+      max-width: 30rem;
+    }
+  }
+
   .btn {
     &,
     &:link,
