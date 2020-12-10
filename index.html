@@ -21,7 +21,7 @@
           I'm a Software Developer.
         </h1>
         <a
-          class="hero__btn btn btn--large btn--green"
+          class="hero__btn btn btn--large btn--green u-noselect"
           onclick="scrollToAbout()"
           >Learn more</a
         >
@@ -149,6 +149,51 @@
           </div>
         </div>
         <div class="projects__project">
+          <h3 class="projects__title">GitHub Issues</h3>
+          <div class="projects__details">
+            <p>
+              A React application that lists all of the active issues
+              on the React GitHub repository. Users can click through
+              the different pages of issues.
+            </p>
+            <p>
+              The Fetch API was used to grab the latest issues, and
+              store them in state for the current page. The issue data
+              was parsed and loaded into individual components.
+              Pagination was used to load older issues and jump
+              forward and backward to view them all. Moment.js was
+              used to easily display how long ago the issue was
+              created.
+            </p>
+          </div>
+          <div class="projects__btns">
+            <a
+              href="https://shanesc.github.io/github-issues/"
+              target="_blank"
+              class="btn btn--green"
+              >See Live</a
+            >
+            <a
+              href="https://github.com/shanesc/github-issues/"
+              target="_blank"
+              class="btn btn--green btn--no-border u-shift-right"
+              >Source Code</a
+            >
+          </div>
+          <div class="projects__demo">
+            <a
+              href="https://shanesc.github.io/github-issues/"
+              target="_blank"
+            >
+              <img
+                src="images/github-issues-project.png"
+                alt="GitHub Issues project screenshot"
+                class="projects__image u-shift-up"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="projects__project">
           <h3 class="projects__title">Tip Calculator</h3>
           <div class="projects__details">
             <p>
@@ -258,7 +303,6 @@
             name="chevron-up-outline"
             class="u-shift-up"
           ></ion-icon>
-          <!-- <i class="fa fa-angle-up fa-2x u-shift-up"></i> -->
         </a>
         <div class="social-links">
           <a href="https://twitter.com/shanem_io" target="_blank">
@@ -267,10 +311,10 @@
           <a href="https://www.github.com/shanesc" target="_blank">
             <i class="fab fa-github u-shift-up"></i>
           </a>
-          <!-- <a href="https://codepen.io/shaneSC" target="_blank">
+          <!-- <a href="#" target="_blank">
             <i class="fab fa-codepen u-shift-up"></i>
           </a>
-          <a href="https://www.linkedin.com/in/shane-m-0668a766/" target="_blank">
+          <a href="#" target="_blank">
             <i class="fab fa-linkedin-in u-shift-up"></i>
           </a> -->
         </div>
@@ -282,11 +326,11 @@
     </footer>
     <script>
       function scrollToAbout() {
-        var elmnt = document.querySelector('.about');
+        const elmnt = document.querySelector('.about');
         elmnt.scrollIntoView({ behavior: 'smooth' });
       }
       function scrollToHero() {
-        var elmnt = document.querySelector('.hero');
+        const elmnt = document.querySelector('.hero');
         elmnt.scrollIntoView({ behavior: 'smooth' });
       }
     </script>
