@@ -2,10 +2,10 @@
 /* VARIABLES */
 :root {
   --black: #272341;
-  --light-green: #007ecd;
+  --light-green: #3399d9;
   --dark-green: #666c8b;
   --white: #fff;
-  --gradient-green: linear-gradient(135deg, #0068a9, #007ecd); }
+  --gradient-green: linear-gradient(135deg, #1e81be, #6bbcef); }
 
 /* RESET */
 *,
