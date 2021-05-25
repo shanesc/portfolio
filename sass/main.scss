@@ -3,11 +3,16 @@
 /* VARIABLES */
 
 :root {
-  --black: #272341;
-  --light-green: #00cdac;
-  --dark-green: #668b85;
-  --white: #fff;
-  --gradient-green: linear-gradient(135deg, #02aab0, #00cdac);
+  --black: hsl(248, 30%, 20%);
+  --primary-color: hsl(170, 100%, 40%);
+  --secondary-color: hsl(182, 98%, 35%);
+  --link-color: hsl(246, 84%, 55%);
+  --white: hsl(0, 0%, 100%);
+  --gradient: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
 
 /* RESET */
@@ -69,7 +74,7 @@ h3 {
 
 p {
   line-height: 1.5;
-  text-align: justify;
+  text-align: start;
   margin-bottom: 1rem;
 
   &:last-of-type {
@@ -80,7 +85,7 @@ p {
 a:link,
 a:visited {
   text-decoration: none;
-  color: #0031a4;
+  color: var(--link-color);
 }
 
 address {
@@ -92,12 +97,12 @@ address {
   color: var(--white);
 }
 
-.u-color-light-green {
-  color: var(--light-green);
+.u-color-primary {
+  color: var(--primary-color);
 }
 
-.u-color-dark-green {
-  color: var(--dark-green);
+.u-color-secondary {
+  color: var(--secondary-color);
 }
 
 .u-flex-column {
@@ -155,7 +160,7 @@ address {
 }
 
 .about {
-  background-image: var(--gradient-green);
+  background-image: var(--gradient);
   padding: 10rem 1.5rem 15%;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -206,12 +211,12 @@ address {
     max-width: 61rem;
     max-height: 40rem;
     border-radius: 3px;
-    box-shadow: 0 0.5rem 1rem rgba(22, 22, 22, 0.2);
+    box-shadow: 0 0.5rem 1rem hsla(0, 0%, 9%, 0.2);
   }
 }
 
 .contact {
-  background-image: var(--gradient-green);
+  background-image: var(--gradient);
   margin-top: 10rem;
   padding: 15rem 7rem 10rem;
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
@@ -235,7 +240,7 @@ address {
 
   &__copyright {
     font-size: 1.3rem;
-    color: #808080;
+    color: hsl(0, 0%, 50%);
   }
 }
 
@@ -247,7 +252,7 @@ address {
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
-    border: 2px var(--light-green) solid;
+    border: 2px var(--primary-color) solid;
     padding: 0.8rem 1.6rem;
   }
 
@@ -260,12 +265,12 @@ address {
     &,
     &:link,
     &:visited {
-      color: var(--light-green);
+      color: var(--primary-color);
     }
 
     &:hover {
-      color: #fff;
-      background-color: var(--light-green);
+      color: var(--white);
+      background-color: var(--primary-color);
     }
   }
 
@@ -278,7 +283,7 @@ address {
     }
 
     &:hover {
-      color: var(--light-green);
+      color: var(--primary-color);
       background-color: var(--white);
     }
   }
@@ -292,7 +297,7 @@ address {
 
     &:hover {
       background: none;
-      color: var(--light-green);
+      color: var(--primary-color);
     }
   }
 
@@ -324,7 +329,7 @@ address {
 }
 
 .social-links i {
-  color: #fff;
+  color: var(--white);
 }
 
 .u-shift-up {
